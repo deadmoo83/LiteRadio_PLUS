@@ -246,19 +246,6 @@ uint16_t SendRCdataToRF(uint16_t *crsfcontrol_data) {
              (Radio.currFreq == GetInitialFreq()))  // don't sync just after we changed freqs (helps with hwTimer.init()
                                                     // being in sync from the get go)
   {
-    //		 //在发送补偿包的时候，不知道为什么，定时器中断时间会提前中断？需要加延时校准，否者在连接betaflight
-    //SPI接收机时 接收端会跳频混乱，后续应该会改善。 		if(tx_config.rate == 0x01)  //250Hz
-    //		{
-    //			delay(2000);
-    //		}
-    //		if(tx_config.rate == 0x02)  //150Hz
-    //		{
-    //			delay(1000);
-    //		}
-    //		if(tx_config.rate == 0x00)  //500Hz
-    //		{
-    //			delay(3000);
-    //		}
     GenerateSyncPacketData();
     syncSlot = (syncSlot + 1) % (ExpressLRS_currAirRate_Modparams->FHSShopInterval * 2);
   } else {

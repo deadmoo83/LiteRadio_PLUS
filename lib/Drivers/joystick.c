@@ -180,7 +180,7 @@ void joystickTask(void *param) {
       STMFLASH_Read(HARDWARE_PATCH_VERSION_ADDR, &device_info_buff[5], 1);
       device_info_buff[6] = FIRMWARE_MAJOR_VERSION;
       device_info_buff[7] = FIRMWARE_MINOR_VERSION;
-      device_info_buff[8] = FIRMWARE_PITCH_VERSION;
+      device_info_buff[8] = FIRMWARE_PATCH_VERSION;
       STMFLASH_Read(FIRST_FLASH_MARK_ADDR, &device_info_buff[9], 1);  // 0xa55a
       hidReportData[0] = DEVICE_INFO_ID;
       hidReportData[1] = (device_info_buff[0] & 0x00ff) | ((device_info_buff[1] & 0x00FF) << 8);
