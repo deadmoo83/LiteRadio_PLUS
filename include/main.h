@@ -1,22 +1,22 @@
 /* USER CODE BEGIN Header */
 /**
- ******************************************************************************
- * @file           : main.h
- * @brief          : Header for main.c file.
- *                   This file contains the common defines of the application.
- ******************************************************************************
- * @attention
- *
- * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
- * All rights reserved.</center></h2>
- *
- * This software component is licensed by ST under Ultimate Liberty license
- * SLA0044, the "License"; You may not use this file except in compliance with
- * the License. You may obtain a copy of the License at:
- *                             www.st.com/SLA0044
- *
- ******************************************************************************
- */
+  ******************************************************************************
+  * @file           : main.h
+  * @brief          : Header for main.c file.
+  *                   This file contains the common defines of the application.
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under Ultimate Liberty license
+  * SLA0044, the "License"; You may not use this file except in compliance with
+  * the License. You may obtain a copy of the License at:
+  *                             www.st.com/SLA0044
+  *
+  ******************************************************************************
+  */
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -64,8 +64,8 @@ void Error_Handler(void);
 #define KEY_POWER_GPIO_Port GPIOC
 #define POWER_EN_Pin GPIO_PIN_15
 #define POWER_EN_GPIO_Port GPIOC
-#define SX1280_TXRX_EN_Pin GPIO_PIN_5
-#define SX1280_TXRX_EN_GPIO_Port GPIOA
+#define PA_TXRX_EN_Pin GPIO_PIN_5
+#define PA_TXRX_EN_GPIO_Port GPIOA
 #define SX1280_RST_Pin GPIO_PIN_7
 #define SX1280_RST_GPIO_Port GPIOA
 #define CHRG_IN_Pin GPIO_PIN_0
@@ -104,17 +104,17 @@ void Error_Handler(void);
 #define SWC_L_Pin GPIO_PIN_9
 #define SWC_L_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-#define THROTTLE_ENABLED 1  // 1 for enabled, 0 for disabled
-#define RUDDER_ENABLED 1    // 1 for enabled, 0 for disabled
-#define JOYSTICK_AXIS_NUM 3
-#define SECONDARY_AXIS_NUM 3
+#define THROTTLE_ENABLED				1					// 1 for enabled, 0 for disabled
+#define RUDDER_ENABLED					1					// 1 for enabled, 0 for disabled
+#define JOYSTICK_AXIS_NUM				3
+#define SECONDARY_AXIS_NUM				3
 
-#define BUTTONS_NUM 0
-#define LEDS_NUM 0
-#define BATTERY_CHECK_NUM 1
-#define JOYSTICK_AXIS_ENABLED 1
-#define SECONDARY_AXIS_ENABLED 1
-#define BUTTONS_ENABLED 0
+#define BUTTONS_NUM					    0
+#define LEDS_NUM						0
+#define BATTERY_CHECK_NUM               1
+#define JOYSTICK_AXIS_ENABLED  	        1
+#define SECONDARY_AXIS_ENABLED  	    1
+#define BUTTONS_ENABLED  	            0
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

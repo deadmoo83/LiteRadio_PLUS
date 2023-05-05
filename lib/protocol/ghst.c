@@ -4,7 +4,6 @@
 #include "buzzer.h"
 #include "mixes.h"
 #include "status.h"
-#include "common.h"
 
 uint8_t ghstPacket[14] = {0,             // frame
                           0,             // addr
