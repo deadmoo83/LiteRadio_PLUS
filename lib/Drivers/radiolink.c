@@ -2,6 +2,7 @@
 #include "gimbal.h"
 #include "switches.h"
 #include "crsf.h"
+#include "ghst.h"
 #include "rgb.h"
 #include "mixes.h"
 #include "key.h"
@@ -74,10 +75,16 @@ void radiolinkTask(void *param) {
       TIM1->ARR = 9000;
       break;
 
+//    case 4:
+//      RF_Init = CRSF_Init;
+//      RcDateSendToBuff = CRSF_Process;
+//      RF_Bind = CRSF_SetBind;
+//      break;
+
     case 4:
-      RF_Init = CRSF_Init;
-      RcDateSendToBuff = CRSF_Process;
-      RF_Bind = CRSF_SetBind;
+      RF_Init = GHST_Init;
+      RcDateSendToBuff = GHST_Process;
+      RF_Bind = GHST_SetBind;
       break;
 #elif defined(LiteRadio_Plus_SX1280)
     case 0:
@@ -89,6 +96,11 @@ void radiolinkTask(void *param) {
       RF_Init = CRSF_Init;
       RF_Process = CRSF_Process;
       RF_Bind = CRSF_SetBind;
+      break;
+    case 2:
+      RF_Init = GHST_Init;
+      RcDateSendToBuff = GHST_Process;
+      RF_Bind = GHST_SetBind;
       break;
 #elif defined(LiteRadio_Plus_SX1276)
     case 0:

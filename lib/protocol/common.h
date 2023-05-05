@@ -82,6 +82,7 @@ enum {
 // current and sent switch values
 #define N_SWITCHES 8
 
+#if !defined(LiteRadio_Plus_CC2500)
 #define AUX1 4
 #define AUX2 5
 #define AUX3 6
@@ -90,6 +91,7 @@ enum {
 #define AUX6 9
 #define AUX7 10
 #define AUX8 11
+#endif
 
 extern uint8_t BindingUID[6];
 extern uint8_t UID[6];

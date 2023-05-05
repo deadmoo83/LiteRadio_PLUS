@@ -12,6 +12,8 @@
 #define SFHSS_PACKET_LEN 13
 #define SFHSS_TX_ID_LEN 2
 
+static uint8_t RF_POWER = 0xff;
+
 uint32_t MProtocol_id;  // tx id,
 uint8_t fhss_code = 0;  // 0-27
 uint8_t rx_tx_addr[5];

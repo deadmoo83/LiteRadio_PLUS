@@ -27,7 +27,7 @@ expresslrs_rf_pref_params_s ExpressLRS_AirRateRFperf[RATE_MAX] = {{0, RATE_200HZ
                                                                   {3, RATE_25HZ, -123, 17540, 6000, 4000, 2000, 4000}};
 #endif
 
-#if defined(Regulatory_Domain_ISM_2400)
+#if !defined(LiteRadio_Plus_CC2500) && defined(Regulatory_Domain_ISM_2400)
 
 #include "sx1280.h"
 
@@ -43,6 +43,7 @@ expresslrs_rf_pref_params_s ExpressLRS_AirRateRFperf[RATE_MAX] = {{0, RATE_500HZ
                                                                   {3, RATE_50HZ, -117, 18443, 4000, 2500, 0, 5000}};
 #endif
 
+#if !defined(LiteRadio_Plus_CC2500)
 // const expresslrs_mod_settings_s * ExpressLRS_nextAirRate;
 expresslrs_mod_settings_s *ExpressLRS_currAirRate;
 expresslrs_mod_settings_s *ExpressLRS_prevAirRate;
@@ -70,6 +71,7 @@ expresslrs_rf_pref_params_s *get_elrs_RFperfParams(int8_t index) {
   }
   return &ExpressLRS_AirRateRFperf[index];
 }
+#endif
 
 uint8_t enumRatetoIndex(expresslrs_RFrates_e rate) {  // convert enum_rate to index
   for (int i = 0; i < RATE_MAX; i++) {

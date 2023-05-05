@@ -145,7 +145,7 @@ enum CC2500_POWER {
 
 enum TXRX_State { TXRX_OFF, TX_EN, RX_EN };
 
-extern uint8_t RF_POWER;
+//extern uint8_t RF_POWER;
 
 uint8_t CC2500_Init(uint8_t versionSelectFlg);
 
