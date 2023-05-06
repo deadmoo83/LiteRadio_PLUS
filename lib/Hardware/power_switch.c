@@ -21,7 +21,7 @@ void powerswitchTask(void* param)
 		if((powerEvent & RC_POWER_ON) == RC_POWER_ON)
 		{
 
-            RGB_BreathUp(BLUE);
+            RGB_Breath_Up(BLUE);
             taskENTER_CRITICAL();	/*�����ٽ�*/
             
             vTaskSuspend(powerTaskHandle);
